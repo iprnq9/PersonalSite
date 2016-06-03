@@ -1,0 +1,87 @@
+@font-face {
+    font-family: ;
+    src: url();
+}
+
+html {
+    color: white;
+}
+
+.nav {
+    text-transform: uppercase;
+    color: white;
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+.nav .col {
+    position: relative;
+    top: 50%;
+}
+
+.profile-image {
+    width: 80%;
+    margin-top: 10%;
+    border: white solid 6px;
+}
+
+.name-wrapper{
+    text-align: center;
+}
+
+.name {
+    text-transform: uppercase;
+    color: white;
+    font-size: 18pt;
+}
+
+.container {
+    margin-top: -20px;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+
+.container .card {
+    padding: 15px;
+}
+
+.custom-card-title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14pt;
+    margin-bottom: 5px;
+}
+
+.custom-card-icon {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.custom-card-icon hr {
+    border: 1px white solid;
+}
+
+.custom-card-content {
+    padding: 15px;
+    margin-bottom: 5px;
+}
+
+.custom-card-button {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+
+footer {
+    margin-top: -20px;
+}
+
+footer .btn {
+    margin-bottom: 13px;
+}
+
+p {
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+}
