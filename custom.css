@@ -3,7 +3,7 @@
     src: url();
 }
 
-html {
+html, a {
     color: white;
 }
 
@@ -43,6 +43,26 @@ html {
 
 .container .card {
     padding: 15px;
+}
+
+.heading {
+    color: #DDDDDD;
+}
+
+.heading hr {
+    border: dashed #DDDDDD 4px;
+}
+
+.heading h3 {
+    color: #DDDDDD;
+}
+
+.major-gpa hr {
+    border: 1px white solid;
+}
+
+.coursework {
+
 }
 
 .custom-card-title {

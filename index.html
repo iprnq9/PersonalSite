@@ -6,6 +6,8 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link href="custom.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -13,10 +15,9 @@
 <div class="header blue z-depth-1">
     <div class="row">
         <div class="col s12 l8 push-l2">
-            <div class="row nav center-align valign-wrapper">
-                <div class="l1"></div>
-                <div class="col s4 l2">
-                    Projects
+            <div class="row nav valign-wrapper">
+                <div class="col s4 l2 valign-wrapper">
+                    <a href="projects.html">Projects</a>
                 </div>
                 <div class="col s4 l2">
                     About Ian
@@ -30,7 +31,6 @@
                 <div class="col s4 l2">
                     Resume
                 </div>
-
             </div>
         </div>
     </div>
@@ -38,6 +38,82 @@
 
 <div class="">
     <div class="container">
+        <div class="row heading valign-wrapper">
+            <div class="col hide-on-small-and-down l1">
+                <hr />
+            </div>
+            <div class="col s4 l1">
+                <i class="material-icons medium circle left">school</i>
+            </div>
+            <div class="col s8 l3 center-align">
+                <h3>Education</h3>
+            </div>
+            <div class="col hide-on-small-and-down l7">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <div class="card-panel blue education">
+                    <div class="row">
+                        <div class="col s10">
+                            <h4>Missouri University of Science and Technology</h4>
+                            <h5>Rolla, MO</h5>
+                        </div>
+                        <div class="col s2 center-align valign-wrapper">
+                            <img src="images/mst-green3.png" class="responsive-img" />
+                        </div>
+                    </div>
+                    <div class="row major-gpa center-align valign-wrapper">
+                        <div class="col hide-on-small-and-down l4">
+                            <hr />
+                        </div>
+                        <div class="col s12 l4 custom-card-title">
+                            Electrical Engineering, 3.95
+                        </div>
+                        <div class="col hide-on-small-and-down l4">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row coursework">
+                        <div class="col s12 l4 center-align">
+                            <!-- Modal Trigger -->
+                            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Circuits I</a>
+
+                            <!-- Modal Structure -->
+                            <div id="modal1" class="modal modal-fixed-footer">
+                                <div class="modal-content">
+                                    <h4>Circuits I &bull; Elec Eng 2100</h4>
+                                    <p>Circuit elements, signals, Kirchhoff's laws, network theorems, mesh and nodal analysis, transient and complete response of RL, RC, and RLC circuits. Prerequisites: Math 1215 (or 1221) with a grade of "C" or better. Students should enroll in Elec Eng 2100 and Elec Eng 2101 simultaneously.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+                                </div>
+                            </div>
+                            Circuits II<br>
+                            Introduction to Digital Logic<br>
+                            Introduction to Electronic Devices<br>
+                            Introduction to Programming (C++)
+                        </div>
+                        <div class="col s12 l4 center-align">
+                            Calculus I, II, III<br>
+                            Differential Equations<br>
+                            Linear Algebra<br>
+                            Introduction to Electronic Devices<br>
+                            Introduction to Programming (C++)
+                        </div>
+                        <div class="col s12 l4 center-align">
+                            Circuits I<br>
+                            Circuits II<br>
+                            Introduction to Digital Logic<br>
+                            Introduction to Electronic Devices<br>
+                            Introduction to Programming (C++)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col s12 l12">
                 <div class="card-panel blue">
@@ -144,9 +220,6 @@
     </div>
 </footer>
 </body>
-
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
 
 <script>
     $(window).scroll(function() {
