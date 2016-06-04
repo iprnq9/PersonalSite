@@ -65,6 +65,38 @@ html, a {
 
 }
 
+.experience:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left:-40px;
+    z-index: 1;
+    border: solid 20px transparent;
+    border-right-color: #0D47A1;
+}
+
+.experience {
+    padding: 10px;
+}
+
+.experience .title {
+    font-size: 18pt;
+    display: block;
+}
+
+.experience .position {
+    font-size: 14pt;
+    font-style: ;
+}
+
+.experience .duties {
+    margin-left: 40px;
+}
+
+.experience .duties li {
+    list-style-type: disc;
+}
+
 .custom-card-title {
     text-transform: uppercase;
     text-align: center;
@@ -104,4 +136,8 @@ footer .btn {
 p {
     -webkit-margin-before: 1em;
     -webkit-margin-after: 1em;
+}
+
+.btn {
+    margin-bottom: 10px;
 }

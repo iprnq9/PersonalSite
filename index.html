@@ -26,7 +26,7 @@
                     <img src="images/profile.jpg" alt="Ian's Profile Picture" class="circle responsive-img profile-image z-depth-1">
                 </div>
                 <div class="col s4 l2">
-                    Resume
+                    <a href="resume.html">Resume</a>
                 </div>
                 <div class="col s4 l2">
                     Resume
@@ -38,82 +38,6 @@
 
 <div class="">
     <div class="container">
-        <div class="row heading valign-wrapper">
-            <div class="col hide-on-small-and-down l1">
-                <hr />
-            </div>
-            <div class="col s4 l1">
-                <i class="material-icons medium circle left">school</i>
-            </div>
-            <div class="col s8 l3 center-align">
-                <h3>Education</h3>
-            </div>
-            <div class="col hide-on-small-and-down l7">
-                <hr />
-            </div>
-        </div>
-        <div class="row">
-            <div class="col s12">
-                <div class="card-panel blue education">
-                    <div class="row">
-                        <div class="col s10">
-                            <h4>Missouri University of Science and Technology</h4>
-                            <h5>Rolla, MO</h5>
-                        </div>
-                        <div class="col s2 center-align valign-wrapper">
-                            <img src="images/mst-green3.png" class="responsive-img" />
-                        </div>
-                    </div>
-                    <div class="row major-gpa center-align valign-wrapper">
-                        <div class="col hide-on-small-and-down l4">
-                            <hr />
-                        </div>
-                        <div class="col s12 l4 custom-card-title">
-                            Electrical Engineering, 3.95
-                        </div>
-                        <div class="col hide-on-small-and-down l4">
-                            <hr />
-                        </div>
-                    </div>
-                    <div class="row coursework">
-                        <div class="col s12 l4 center-align">
-                            <!-- Modal Trigger -->
-                            <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Circuits I</a>
-
-                            <!-- Modal Structure -->
-                            <div id="modal1" class="modal modal-fixed-footer">
-                                <div class="modal-content">
-                                    <h4>Circuits I &bull; Elec Eng 2100</h4>
-                                    <p>Circuit elements, signals, Kirchhoff's laws, network theorems, mesh and nodal analysis, transient and complete response of RL, RC, and RLC circuits. Prerequisites: Math 1215 (or 1221) with a grade of "C" or better. Students should enroll in Elec Eng 2100 and Elec Eng 2101 simultaneously.
-                                    </p>
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
-                                </div>
-                            </div>
-                            Circuits II<br>
-                            Introduction to Digital Logic<br>
-                            Introduction to Electronic Devices<br>
-                            Introduction to Programming (C++)
-                        </div>
-                        <div class="col s12 l4 center-align">
-                            Calculus I, II, III<br>
-                            Differential Equations<br>
-                            Linear Algebra<br>
-                            Introduction to Electronic Devices<br>
-                            Introduction to Programming (C++)
-                        </div>
-                        <div class="col s12 l4 center-align">
-                            Circuits I<br>
-                            Circuits II<br>
-                            Introduction to Digital Logic<br>
-                            Introduction to Electronic Devices<br>
-                            Introduction to Programming (C++)
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
             <div class="col s12 l12">
                 <div class="card-panel blue">
@@ -124,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col s12 m6 l4">
-                <div class="card green">
+                <div class="card green hoverable">
                     <div class="row custom-card-title">
                         Title
                     </div>
@@ -148,7 +72,7 @@
                 </div>
             </div>
             <div class="col s12 m6 l4">
-                <div class="card green">
+                <div class="card green hoverable">
                     <div class="row custom-card-title">
                         Title
                     </div>
@@ -172,7 +96,7 @@
                 </div>
             </div>
             <div class="col s12 m6 l4">
-                <div class="card green">
+                <div class="card green hoverable">
                     <div class="row custom-card-title">
                         Title
                     </div>
@@ -232,5 +156,12 @@
             $('.profile-image-wrapper').removeClass("hidden");
         }
     });
+
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+        $('.btn').addClass('blue darken-4');
+    });
+
 </script>
 </html>

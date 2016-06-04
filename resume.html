@@ -6,31 +6,29 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link href="custom.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
 </head>
 
 <body>
 
 <div class="header blue z-depth-1">
     <div class="row">
-        <div class="col s12 l8 offset-l2">
-            <div class="row profile-image-wrapper">
-                <div class="col s4 offset-s4 l2 offset-l5">
+        <div class="col s12 l8 push-l2">
+            <div class="row nav valign-wrapper">
+                <div class="col s4 l2 valign-wrapper">
+                    <a href="projects.html">Projects</a>
+                </div>
+                <div class="col s4 l2">
+                    About Ian
+                </div>
+                <div class="col s4 l2">
                     <img src="images/profile.jpg" alt="Ian's Profile Picture" class="circle responsive-img profile-image z-depth-1">
                 </div>
-            </div>
-            <div class="row name-wrapper">
-                <div class="col s12 l4 offset-l4 name">
-                    Ian Roberts
+                <div class="col s4 l2">
+                    <a href="resume.html">Resume</a>
                 </div>
-            </div>
-            <div class="row nav center-align">
-                <div class="col s4 l4">
-                    Projects
-                </div>
-                <div class="col s4 l4">
-                    About Me
-                </div>
-                <div class="col s4 l4">
+                <div class="col s4 l2">
                     Resume
                 </div>
             </div>
@@ -40,21 +38,500 @@
 
 <div class="">
     <div class="container">
+        <div class="row heading valign-wrapper">
+            <div class="col s2 l1">
+                <hr />
+            </div>
+            <div class="col s2 l1">
+                <i class="material-icons medium circle right">school</i>
+            </div>
+            <div class="col s6 l3 center-align">
+                <h3>Education</h3>
+            </div>
+            <div class="col s2 l7">
+                <hr />
+            </div>
+        </div>
         <div class="row">
-            <div class="col s12 l4">
-                <div class="card-panel yellow">
-                    Computer Skills
+            <div class="col s12">
+                <div class="card-panel blue education">
+                    <div class="row">
+                        <div class="col s4 push-s4 l2 push-l5">
+                            <img src="images/mst-green3.png" class="responsive-img" />
+                        </div>
+                        <div class="col s12 center-align">
+                            <h4>Missouri University of Science and Technology</h4>
+                            <h5>Rolla, MO</h5>
+                        </div>
+                    </div>
+                    <div class="row major-gpa center-align valign-wrapper">
+                        <div class="col hide-on-small-and-down l4">
+                            <hr />
+                        </div>
+                        <div class="col s12 l4 custom-card-title">
+                            Electrical Engineering, 3.95
+                        </div>
+                        <div class="col hide-on-small-and-down l4">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row coursework">
+                        <div class="col s12 l4 center-align">
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2100">Circuits I</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2100" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits I &bull; Elec Eng 2100</h4>
+                                    <p>Circuit elements, signals, Kirchhoff's laws, network theorems, mesh and nodal analysis, transient and complete response of RL, RC, and RLC circuits. Prerequisites: Math 1215 (or 1221) with a grade of "C" or better. Students should enroll in Elec Eng 2100 and Elec Eng 2101 simultaneously.
+                                    </p>
+                                    <hr />
+                                    <h4>Circuits I Laboratory &bull; Elec Eng 2101</h4>
+                                    <p>Safety, basic measurements and meters, oscilloscopes, resistor networks, measurement of capacitors and inductors, RLC circuit response. Prerequisite: Preceded or accompanied by Elec Eng 2100. A student who drops Elec Eng 2100 must also drop Elec Eng 2101.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2120">Circuits II</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2120" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits II &bull; Elec Eng 2120</h4>
+                                    <p>Analysis of steady state AC circuits, phasor notation, polyphase circuits, complex frequency and frequency response, magnetically coupled circuits. Prerequisites: Elec Eng 2100 and Math 2222 each with grade of "C" or better; passing the Elec Eng Advancement Exam I.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2200">Intro Electronic Devices</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2200" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Electronic Devices &bull; Elec Eng 2200</h4>
+                                    <p>Materials and device structures for applications in analog and digital electronics. Topics include characteristics and basic circuits for diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Students should enroll in Elec Eng 2200 and Elec Eng 2201 simultaneously.</p>
+                                    <hr />
+                                    <h4>Introduction to Electronic Devices Laboratory&bull; Elec Eng 2201</h4>
+                                    <p>Laboratory tools and measurement techniques for basic electronic circuits using diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Topics include DC biasing and applications in analog and digital electronics. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Preceded or accompanied by Elec Eng 2200.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cpe2210">Intro to Digital Logic</a>
+                            <!-- Modal Structure -->
+                            <div id="cpe2210" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Digital Logic &bull; Comp Eng 2210</h4>
+                                    <p>Binary arithmetic, Boolean algebra, logic and memory elements, computer organization. Prerequisite: Sophomore standing. Comp Eng 2211 is also a co-requisite for Comp Eng and Elec Eng majors.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Digital Logic Lab &bull; Comp Eng 2211</h4>
+                                    <p>Introduction to digital design techniques, logic gates, Medium Scale Integration (MSI) parts and flipflops, Timing analysis, Programming and use of Programmable Logic Devices (PLD). Prerequisite: Preceded or accompanied by Comp Eng 2210.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cs1570">Intro to Programming (C++)</a>
+                            <!-- Modal Structure -->
+                            <div id="cs1570" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Programming (C++) &bull; Comp Sci 1570</h4>
+                                    <p>Programming design and development using C++. Emphasis placed on problem solving methods using good programming practices and algorithm design and development. Topics included are syntax/semantics, logical, relational and arithmetic operators, decision branching, loops, functions, file I/O, arrays, output formatting, C-strings, and an introduction to Object-Oriented Programming including the development and use of classes. Prerequisite: Accompanied by Comp Sci 1580.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Programming (C++) Laboratory &bull; Comp Sci 1580</h4>
+                                    <p>Practical applications of concepts learned in Computer Science 1570. Hands-on instruction in C++ developing, debugging, and testing programming projects. Prerequisite: Accompanied by Comp Sci 1570.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                        </div>
+                        <div class="col s12 l4 center-align">
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2100">Circuits I</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2100" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits I &bull; Elec Eng 2100</h4>
+                                    <p>Circuit elements, signals, Kirchhoff's laws, network theorems, mesh and nodal analysis, transient and complete response of RL, RC, and RLC circuits. Prerequisites: Math 1215 (or 1221) with a grade of "C" or better. Students should enroll in Elec Eng 2100 and Elec Eng 2101 simultaneously.
+                                    </p>
+                                    <hr />
+                                    <h4>Circuits I Laboratory &bull; Elec Eng 2101</h4>
+                                    <p>Safety, basic measurements and meters, oscilloscopes, resistor networks, measurement of capacitors and inductors, RLC circuit response. Prerequisite: Preceded or accompanied by Elec Eng 2100. A student who drops Elec Eng 2100 must also drop Elec Eng 2101.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2120">Circuits II</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2120" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits II &bull; Elec Eng 2120</h4>
+                                    <p>Analysis of steady state AC circuits, phasor notation, polyphase circuits, complex frequency and frequency response, magnetically coupled circuits. Prerequisites: Elec Eng 2100 and Math 2222 each with grade of "C" or better; passing the Elec Eng Advancement Exam I.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2200">Intro Electronic Devices</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2200" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Electronic Devices &bull; Elec Eng 2200</h4>
+                                    <p>Materials and device structures for applications in analog and digital electronics. Topics include characteristics and basic circuits for diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Students should enroll in Elec Eng 2200 and Elec Eng 2201 simultaneously.</p>
+                                    <hr />
+                                    <h4>Introduction to Electronic Devices Laboratory&bull; Elec Eng 2201</h4>
+                                    <p>Laboratory tools and measurement techniques for basic electronic circuits using diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Topics include DC biasing and applications in analog and digital electronics. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Preceded or accompanied by Elec Eng 2200.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cpe2210">Intro to Digital Logic</a>
+                            <!-- Modal Structure -->
+                            <div id="cpe2210" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Digital Logic &bull; Comp Eng 2210</h4>
+                                    <p>Binary arithmetic, Boolean algebra, logic and memory elements, computer organization. Prerequisite: Sophomore standing. Comp Eng 2211 is also a co-requisite for Comp Eng and Elec Eng majors.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Digital Logic Lab &bull; Comp Eng 2211</h4>
+                                    <p>Introduction to digital design techniques, logic gates, Medium Scale Integration (MSI) parts and flipflops, Timing analysis, Programming and use of Programmable Logic Devices (PLD). Prerequisite: Preceded or accompanied by Comp Eng 2210.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cs1570">Intro to Programming (C++)</a>
+                            <!-- Modal Structure -->
+                            <div id="cs1570" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Programming (C++) &bull; Comp Sci 1570</h4>
+                                    <p>Programming design and development using C++. Emphasis placed on problem solving methods using good programming practices and algorithm design and development. Topics included are syntax/semantics, logical, relational and arithmetic operators, decision branching, loops, functions, file I/O, arrays, output formatting, C-strings, and an introduction to Object-Oriented Programming including the development and use of classes. Prerequisite: Accompanied by Comp Sci 1580.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Programming (C++) Laboratory &bull; Comp Sci 1580</h4>
+                                    <p>Practical applications of concepts learned in Computer Science 1570. Hands-on instruction in C++ developing, debugging, and testing programming projects. Prerequisite: Accompanied by Comp Sci 1570.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                        </div>
+                        <div class="col s12 l4 center-align">
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2100">Circuits I</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2100" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits I &bull; Elec Eng 2100</h4>
+                                    <p>Circuit elements, signals, Kirchhoff's laws, network theorems, mesh and nodal analysis, transient and complete response of RL, RC, and RLC circuits. Prerequisites: Math 1215 (or 1221) with a grade of "C" or better. Students should enroll in Elec Eng 2100 and Elec Eng 2101 simultaneously.
+                                    </p>
+                                    <hr />
+                                    <h4>Circuits I Laboratory &bull; Elec Eng 2101</h4>
+                                    <p>Safety, basic measurements and meters, oscilloscopes, resistor networks, measurement of capacitors and inductors, RLC circuit response. Prerequisite: Preceded or accompanied by Elec Eng 2100. A student who drops Elec Eng 2100 must also drop Elec Eng 2101.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2120">Circuits II</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2120" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Circuits II &bull; Elec Eng 2120</h4>
+                                    <p>Analysis of steady state AC circuits, phasor notation, polyphase circuits, complex frequency and frequency response, magnetically coupled circuits. Prerequisites: Elec Eng 2100 and Math 2222 each with grade of "C" or better; passing the Elec Eng Advancement Exam I.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#ee2200">Intro Electronic Devices</a>
+                            <!-- Modal Structure -->
+                            <div id="ee2200" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Electronic Devices &bull; Elec Eng 2200</h4>
+                                    <p>Materials and device structures for applications in analog and digital electronics. Topics include characteristics and basic circuits for diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Students should enroll in Elec Eng 2200 and Elec Eng 2201 simultaneously.</p>
+                                    <hr />
+                                    <h4>Introduction to Electronic Devices Laboratory&bull; Elec Eng 2201</h4>
+                                    <p>Laboratory tools and measurement techniques for basic electronic circuits using diodes, field-effect transistors, bipolar junction transistors, and operational amplifiers. Topics include DC biasing and applications in analog and digital electronics. Prerequisites: Elec Eng 2100, Elec Eng 2101, and Physics 2135 each with grade of "C" or better; passing the Elec Eng Advancement Exam I. Preceded or accompanied by Elec Eng 2200.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cpe2210">Intro to Digital Logic</a>
+                            <!-- Modal Structure -->
+                            <div id="cpe2210" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Digital Logic &bull; Comp Eng 2210</h4>
+                                    <p>Binary arithmetic, Boolean algebra, logic and memory elements, computer organization. Prerequisite: Sophomore standing. Comp Eng 2211 is also a co-requisite for Comp Eng and Elec Eng majors.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Digital Logic Lab &bull; Comp Eng 2211</h4>
+                                    <p>Introduction to digital design techniques, logic gates, Medium Scale Integration (MSI) parts and flipflops, Timing analysis, Programming and use of Programmable Logic Devices (PLD). Prerequisite: Preceded or accompanied by Comp Eng 2210.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                            <!-- Modal Trigger -->
+                            <a class="waves-effect waves-light btn modal-trigger" href="#cs1570">Intro to Programming (C++)</a>
+                            <!-- Modal Structure -->
+                            <div id="cs1570" class="modal black-text">
+                                <div class="modal-content">
+                                    <h4>Introduction to Programming (C++) &bull; Comp Sci 1570</h4>
+                                    <p>Programming design and development using C++. Emphasis placed on problem solving methods using good programming practices and algorithm design and development. Topics included are syntax/semantics, logical, relational and arithmetic operators, decision branching, loops, functions, file I/O, arrays, output formatting, C-strings, and an introduction to Object-Oriented Programming including the development and use of classes. Prerequisite: Accompanied by Comp Sci 1580.
+                                    </p>
+                                    <hr />
+                                    <h4>Introduction to Programming (C++) Laboratory &bull; Comp Sci 1580</h4>
+                                    <p>Practical applications of concepts learned in Computer Science 1570. Hands-on instruction in C++ developing, debugging, and testing programming projects. Prerequisite: Accompanied by Comp Sci 1570.
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                                </div>
+                            </div><br>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <div class="card yellow">
-                    Technical Interests
+        </div>
+        <div class="row heading valign-wrapper">
+            <div class="col s2 l1">
+                <hr />
+            </div>
+            <div class="col s2 l1">
+                <i class="material-icons medium circle right">work</i>
+            </div>
+            <div class="col s6 l3 center-align">
+                <h3>Experience</h3>
+            </div>
+            <div class="col s2 l7">
+                <hr />
+            </div>
+        </div>
+        <div class="row">
+            <div class="">
+                <div class="row ">
+                    <div class="col s4 blue-text center-align">
+                        <h5>May 2016 - Aug 2016</h5>
+                    </div>
+                    <div class="col experience card left-align blue darken-4 s7">
+                        <span class="title">Dynetics, Inc &bull; Huntsville, AL</span>
+                        <span class="position">Product Engineering Summer Intern</span>
+                        <ul class="duties">
+                            <li>Had fun.</li>
+                            <li>Made stuff.</li>
+                        </ul>
+                        <span class="reference">Reference: Ryan R.</span>
+                    </div>
+                    <div class="col s1"
+                    <div id="pointer" class="hide-on-med-and-down"></div>
+                </div>
+                <div class="row ">
+                    <div class="col s4 blue-text center-align">
+                        <h5>Aug 2015 - May 2016</h5>
+                    </div>
+                    <div class="col experience card left-align blue darken-4 s7">
+                        <span class="title">Missouri S&T - Dept of Residential Life &bull; Rolla, MO</span>
+                        <span class="position">Resident Assistant (RA)</span>
+                        <ul class="duties">
+                            <li>Had fun.</li>
+                            <li>Made stuff.</li>
+                        </ul>
+                        <span class="reference">Reference: Ryan R.</span>
+                    </div>
+                    <div class="col s1"
+                    <div id="pointer"></div>
                 </div>
             </div>
-            <div class="col s12 l4">
-                <div class="card yellow">
-                    Involvement, Experience
-                </div>
+        </div>
+        <div class="row heading valign-wrapper">
+            <div class="col s2 l1">
+                <hr />
+            </div>
+            <div class="col s1 l1">
+                <i class="material-icons medium circle right">desktop_windows</i>
+            </div>
+            <div class="col s6 l2 center-align">
+                <h3>Skills</h3>
+            </div>
+            <div class="col s2 l8">
+                <hr />
+            </div>
+        </div>
+        <div class="skills row">
+            <div class="col s12">
+                <ul class="collapsible popout" data-collapsible="expandable">
+                    <li>
+                        <div class="collapsible-header active blue darken-2"><i class="material-icons">code</i>Programming Languages</div>
+                        <div class="collapsible-body blue">
+                            <p>
+                            <table class="centered">
+                                <thead>
+                                <tr>
+                                    <th colspan="1">Language</th>
+                                    <th colspan="1">Low</th>
+                                    <th colspan="3">Experience Level</th>
+                                    <th colspan="1">High</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>C++</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>SQL</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>HTML, CSS</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript, jQuery</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header active blue darken-2"><i class="material-icons">desktop_mac</i>Software</div>
+                        <div class="collapsible-body blue">
+                            <p>
+                            <table class="centered">
+                                <thead>
+                                <tr>
+                                    <th colspan="1">Application</th>
+                                    <th colspan="1">Low</th>
+                                    <th colspan="3">Experience Level</th>
+                                    <th colspan="1">High</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Simulink</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Altera Quartus, ModelSim</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>MultiSim</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Git</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>Xilinx Vivado, SDK </td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                <tr>
+                                    <td>GNU Radio</td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star</i></td>
+                                    <td><i class="material-icons">star_half</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                    <td><i class="material-icons">star_border</i></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header active blue darken-2"><i class="material-icons">power</i>Technical</div>
+                        <div class="collapsible-body blue"><p>Lorem ipsum dolor sit amet.</p></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -82,6 +559,25 @@
 </footer>
 </body>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+            $('.header').addClass("sticky");
+            $('.profile-image-wrapper').addClass("hidden");
+        }
+        else{
+            $('.header').removeClass("sticky");
+            $('.profile-image-wrapper').removeClass("hidden");
+        }
+    });
+
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+        $('.btn').addClass('blue darken-4');
+    });
+
+</script>
+
+
 </html>
