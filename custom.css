@@ -65,14 +65,16 @@ html, a {
 
 }
 
-.experience:before{
-    content: "";
-    position: absolute;
-    top: 0px;
-    left:-39px;
-    z-index: 1;
-    border: solid 20px transparent;
-    border-right-color: #0D47A1;
+@media only screen and (min-width: 600px) {
+    .experience:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -39px;
+        z-index: 1;
+        border: solid 20px transparent;
+        border-right-color: auto;
+    }
 }
 
 .experience {
@@ -136,7 +138,7 @@ footer {
     margin-top: -20px;
 }
 
-footer .btn {
+footer .btn, .btn-flat {
     margin-bottom: 13px;
 }
 
@@ -145,7 +147,7 @@ p {
     -webkit-margin-after: 1em;
 }
 
-.btn {
+.btn, .btn-flat {
     margin-bottom: 10px;
 }
 
@@ -154,3 +156,30 @@ p {
     height: ;
     border-right: dashed #DDDDDD 4px;
 }
+
+.experience-time {
+    -webkit-transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 600px) {
+    .border-right-red {
+        border-right: 3px solid #F44336;
+    }
+
+    .border-right-blue {
+        border-right: 3px solid #0D47A1;
+    }
+
+    .border-right-teal {
+        border-right: 3px solid #009688;
+    }
+
+    .border-right-blue-grey {
+        border-right: 3px solid #607d8b ;
+    }
+
+    .border-right-grey {
+        border-right: 3px solid #9E9E9E;
+    }
+}
+
