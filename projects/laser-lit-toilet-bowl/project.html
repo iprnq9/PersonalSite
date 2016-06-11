@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laser-Lit Toilet Bowl - Ian Roberts</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize.min.css"  media="screen,projection"/>
+    <link href="../../custom.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+</head>
+
+<body>
+
+<div class="header blue z-depth-1">
+    <div class="row">
+        <div class="col s12 l8 push-l2">
+            <div class="row nav valign-wrapper">
+                <div class="col s4 l2 valign-wrapper">
+                    <a href="../../index.html">Home</a>
+                </div>
+                <div class="col s4 l2">
+                    <a href="../../projects.html">Projects</a>
+                </div>
+                <div class="col s4 l2">
+                    <img src="../../images/profile.jpg" alt="Ian's Profile Picture" class="circle responsive-img profile-image z-depth-1">
+                </div>
+                <div class="col s4 l2">
+                    <a href="../../resume.html">Resume</a>
+                </div>
+                <div class="col s4 l2">
+                    About
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12 card-panel blue-grey">
+            <h4>Laser-Lit Toilet Bowl</h4>
+            <h6>June 10, 2016</h6>
+            <hr />
+
+            <h5 class="italic">Introduction</h5>
+            <p>Men have been there. We wake up in the middle of the night needing to use the bathroom (#1). Either we flip the light switch on and get blinded or we get yelled at for missing the toilet bowl. This project aims to solve that problem. See how we used an Arduino, PIR sensor, and laser to add illumination to urination.</p>
+
+            <p class="center-align"><img src="finished-product.jpg" class="responsive-img" width="70%"/></p>
+
+            <p>This project can be done much simpler, even without the Arduino, but it was convenient for me to prototype with the Arduino.</p>
+
+            <hr />
+
+            <h5 class="italic">Parts List</h5>
+            <table class="centered bordered">
+                <thead>
+                <tr>
+                    <th data-field="id">Item</th>
+                    <th data-field="price">Price</th>
+                    <th data-field="vendor">Vendor</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Arduino Uno</td>
+                    <td>$25</td>
+                    <td><a href="http://store-usa.arduino.cc/products/a000066" target="_blank">Arduino Store USA</a></td>
+                </tr>
+                <tr>
+                    <td>PIR Sensor</td>
+                    <td>$10</td>
+                    <td><a href="https://www.radioshack.com/products/radioshack-passive-infrared-sensor?variant=5717571013" target="_blank">Radio Shack</a></td>
+                </tr>
+                <tr>
+                    <td>Project Enclosure</td>
+                    <td>$5.49</td>
+                    <td><a href="https://www.radioshack.com/products/radioshack-project-enclosure-5x2-5x2?variant=5717250053" target="_blank">Radio Shack</a></td>
+                </tr>
+                <tr>
+                    <td>Laser Module</td>
+                    <td>$3</td>
+                    <td><a href="http://www.icstation.com/laser-transmitter-module-arduino-p-2768.html?aid=55" target="_blank">IC Station</a></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h5 class="italic">Hardware</h5>
+
+            <h5 class="italic">Code</h5>
+            <div class="card code">
+                /*
+                * //////////////////////////////////////////////////
+                * //making sense of the Parallax PIR sensor's output
+                * //////////////////////////////////////////////////
+                *
+                * Switches a LED according to the state of the sensors output pin.
+                * Determines the beginning and end of continuous motion sequences.
+                *
+                * @author: Kristian Gohlke / krigoo (_) gmail (_) com / http://krx.at
+                * @date:   3. September 2006
+                *
+                * kr1 (cleft) 2006
+                * released under a creative commons "Attribution-NonCommercial-ShareAlike 2.0" license
+                * http://creativecommons.org/licenses/by-nc-sa/2.0/de/
+                *
+                *
+                * The Parallax PIR Sensor is an easy to use digital infrared motion sensor module.
+                * (http://www.parallax.com/detail.asp?product_id=555-28027)
+                *
+                * The sensor's output pin goes to HIGH if motion is present.
+                * However, even if motion is present it goes to LOW from time to time,
+                * which might give the impression no motion is present.
+                * This program deals with this issue by ignoring LOW-phases shorter than a given time,
+                * assuming continuous motion is present during these phases.
+                *
+                */
+
+                /////////////////////////////
+                //VARS
+                //the time we give the sensor to calibrate (10-60 secs according to the datasheet)
+                int calibrationTime = 30;
+
+                //the time when the sensor outputs a low impulse
+                long unsigned int lowIn;
+
+                //the amount of milliseconds the sensor has to be low
+                //before we assume all motion has stopped
+                long unsigned int pause = 5000;
+
+                boolean lockLow = true;
+                boolean takeLowTime;
+
+                int pirPin = 3;    //the digital pin connected to the PIR sensor's output
+                int ledPin = 2;    //the digital pin connected to the laser VCC
+
+
+
+                /////////////////////////////
+                //SETUP
+                void setup(){
+                Serial.begin(9600);
+                pinMode(pirPin, INPUT);
+                pinMode(ledPin, OUTPUT);
+                digitalWrite(pirPin, LOW);
+
+                //give the sensor some time to calibrate
+                Serial.print("calibrating sensor ");
+                for(int i = 0; i < calibrationTime; i++){
+                Serial.print(".");
+                delay(1000);
+                }
+                Serial.println(" done");
+                Serial.println("SENSOR ACTIVE");
+                delay(50);
+                }
+
+                ////////////////////////////
+                //LOOP
+                void loop(){
+
+                if(digitalRead(pirPin) == HIGH){
+                digitalWrite(ledPin, HIGH);   //the led visualizes the sensors output pin state
+                Serial.print("LASER ON for 60s.");
+                delay(60000);
+                digitalWrite(ledPin, LOW);
+                Serial.print("LASER OFF indefinitely.");
+                }
+                }
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer blue">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">About This Site</h5>
+                <p class="grey-text text-lighten-4">This is where Ian posts his personal projects and is an outlet for his credentials. If you have any questions or concerns, please feel free to email Ian at BLANK.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <a class="waves-effect waves-light btn blue darken-3"><i class="material-icons left">description</i>Resume</a>
+                <a class="waves-effect waves-light btn blue darken-3"><i class="material-icons left">account_circle</i>LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2016 Ian Roberts
+        </div>
+    </div>
+</footer>
+</body>
+
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1){
+            $('.header').addClass("sticky");
+            $('.profile-image-wrapper').addClass("hidden");
+        }
+        else{
+            $('.header').removeClass("sticky");
+            $('.profile-image-wrapper').removeClass("hidden");
+        }
+    });
+
+    $(document).ready(function(){
+        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal-trigger').leanModal();
+        $('.btn').addClass('blue darken-4');
+
+    });
+
+</script>
+
+
+</html>
