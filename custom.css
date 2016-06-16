@@ -36,7 +36,7 @@ html, a {
 }
 
 .container {
-    margin-top: -20px;
+    margin-top: 35px;
     padding: 15px;
     margin-bottom: 0px;
 }
@@ -183,6 +183,13 @@ p {
     }
 }
 
+@media only screen and (min-width: 992px) {
+    .nav-wrapper {
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+}
+
 .italic {
     font-style: italic;
 }
@@ -194,4 +201,21 @@ p {
     margin: px;
     font-family: "Courier New";
     white-space: pre;
+}
+
+.profile-image {
+    width: 120px;
+    transition: linear 0.25s;
+}
+
+.scroll {
+    width: 70px;
+}
+
+nav {
+    height: 85px;
+}
+
+.nav-wrapper, .side-nav {
+    height: inherit;
 }
