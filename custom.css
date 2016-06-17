@@ -7,6 +7,13 @@ html, a {
     color: white;
 }
 
+* {
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+
 .nav {
     text-transform: uppercase;
     color: white;
@@ -46,15 +53,15 @@ html, a {
 }
 
 .heading {
-    color: #DDDDDD;
+    color: #939393;
 }
 
 .heading hr {
-    border: dashed #DDDDDD 4px;
+    border: dashed #939393 4px;
 }
 
 .heading h3 {
-    color: #DDDDDD;
+    color: #939393;
 }
 
 .major-gpa hr {
@@ -204,7 +211,7 @@ p {
 }
 
 .profile-image {
-    width: 120px;
+    width: 70px;
     transition: linear 0.25s;
 }
 
@@ -216,6 +223,37 @@ nav {
     height: 85px;
 }
 
-.nav-wrapper, .side-nav {
-    height: inherit;
+.nav-mobile ul, li {
+    margin-top: 7px;
+}
+
+.project-title {
+    width: 100%;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.project-date {
+    font-style: italic;
+    color: gray;
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-right {
+    margin-right: 20px;
+}
+
+.card-title {
+    font-size: 16pt;
+}
+
+.quick-facts hr {
+    border: solid black 1px;
 }
