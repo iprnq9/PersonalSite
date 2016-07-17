@@ -257,3 +257,13 @@ body {
 .quick-facts hr {
     border: solid black 1px;
 }
+
+.chip {
+    margin: 10px;
+    text-align: center;
+}
+
+.justify {
+    text-align: justify;
+    text-align-last: justify;
+}
