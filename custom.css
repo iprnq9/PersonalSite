@@ -32,6 +32,13 @@ html, a {
     border: white solid 6px;
 }
 
+.contact {
+    font-size: 14pt;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 auto;
+}
+
 .name-wrapper{
     text-align: center;
 }

@@ -60,6 +60,27 @@
                 </ul>
             </div>
         </div>
+        <div class="col s12 l12 card white">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="finished-product.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="guts.jpg">
+                        <div class="caption left-align">
+                        </div>
+                    </li>
+                    <li>
+                        <img src="lit-bowl.jpg"> <!-- random image -->
+                        <div class="caption right-align">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="col s12 card white black-text">
             <h4>Parts List</h4>
             <div class="project-intro">
@@ -112,6 +133,12 @@
         <div class="col s12 card white black-text">
             <h4>Hardware</h4>
             <div class="project-intro">
+                <img src="entire_setup.png"  class="materialboxed center-block" width="60%"/>
+            </div>
+        </div>
+        <div class="col s12 card white black-text">
+            <h4>Conclusion</h4>
+            <div class="project-intro">
 
             </div>
         </div>
@@ -154,7 +181,11 @@
         $('.modal-trigger').leanModal();
         $('.btn').addClass('blue darken-4');
         $(".button-collapse").sideNav();
+        $('.slider').height(600);
+        $('.slider').slider({full_width: true});
+
     });
+
 
 </script>
 
